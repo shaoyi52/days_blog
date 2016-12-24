@@ -1,0 +1,29 @@
+<div class="pagerWrap">	
+	<div class="row" id="page-pilot">
+		<div class="col-sm-3">
+			<div class="pageItalic">每页		
+				<select ng-model="options.pageSize" ng-options="item for item in options.pageList"  ng-change="pageSizeChanged(options.pageSize)">	
+				</select>
+				条 共 <span  ng-bind="options.pageTotal"></span> 条</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="dataTables_paginate paging_bootstrap align-center">
+				<ul class="pagination">
+					<li class="prev" ng-class="options.pageNumber==1||options.pageTotal==0" ng-click="pageChanged('previousPage')">
+						<a href="javascript:void(0)">前一页</a>
+					</li>
+					<li ng-repeat="item in options.pageNums" ng-class="{active:item.num==options.pageNumber,disabled:item.disable,numdisabled:item.disable}" ng-click="pageChanged(item.num)">
+						<a href="javascript:void(0)" ng-bind="item.num">1</a>
+					</li>
+					<li class="next" ng-class="options.pageNumber==options.pageTotal || options.pageTotal==0" ng-click="pageChanged('nextPage');">
+						<a href="javascript:void(0)">后一页</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="pageItalic text-right">共<span  ng-bind="options.pageTotal"></span>页，<input type="text" size="9" ng-model="options.currentCount" placeholder="PAGE"><button type="button" ng-click="pageChanged(options.currentCount)">Go!</button>
+			</div>
+		</div>
+	</div>
+</div>
