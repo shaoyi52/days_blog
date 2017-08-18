@@ -1,0 +1,18 @@
+{
+  "name": "express_example",
+  "version": "1.0.0",
+  "description": "'express示例'",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "yuyi",
+  "license": "ISC"
+}
