@@ -4,6 +4,7 @@ import { Router,Route,browserHistory,IndexRoute} from 'react-router';
 import Layout from '../views/Layout';
 import Dashboard from '../views/Dashboard';
 import Buttons from '../views/Buttons';
+import Tables from '../views/Tables';
 
 import Login from '../views/Login';
 import Register from '../views/Register';
@@ -21,6 +22,7 @@ export default class ARoute extends Component{
             <Route path="/register" component={Register} />
             <Route path="/Login" component={Login} />
             <Route path="/form" component={Form} />
+            <Route path="/tables" component={Tables} />
         </Route>      
       </Router>
 

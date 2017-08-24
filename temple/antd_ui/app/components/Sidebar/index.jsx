@@ -83,6 +83,11 @@ class Sidebar extends React.Component {
           >
             <Menu.Item key="/buttons"><Link to={'/buttons'}>按钮</Link></Menu.Item>
           </SubMenu>
+          <SubMenu  key="/site/tables"
+            title={<span><Icon type="edit" /><span className="nav-text">表格</span></span>}
+          >
+            <Menu.Item key="/tables"><Link to={'/tables'}>基楚表格</Link></Menu.Item>
+          </SubMenu>
         </Menu>
         <div className="sider-trigger">
           <Icon
