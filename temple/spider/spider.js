@@ -23,8 +23,9 @@ var ep= new eventproxy(),
     pageUrls = [],  //存放收集文章页面网站
     deleteRepeat={}, //去重哈希数组
     catchDate=[], //存放博主信息
-    pageNum = 10;  //要爬取文章的页数
-
+    pageNum = 100;  //要爬取文章的页数
+    startDate = new Date(),	//开始时间
+    endDate = false;	//结束时间
 
 /*for(var i=1; i<=200; i++){
   pageUrls.push('http://www.cnblogs.com/#p'+i);
@@ -97,10 +98,10 @@ function onRequest(req,res){
 
   ep.after('BlogArticleHtml',pageUrls.length*20,function(articleUrls){
 
-    res.write(articleUrls.join("<br/>"));
+/*    res.write(articleUrls.join("<br/>"));
     res.write("<br/>");
     res.write("length:"+articleUrls.length)
-    res.write("<br/>");
+    res.write("<br/>");*/
 
     var curCount = 0;
 
@@ -125,9 +126,10 @@ function onRequest(req,res){
 
             var currentBlogApp = url.split('/p/')[0].split('/')[3];
             var requestId=url.split('/p/')[1].split('.')[0];
-            res.write('currentBlogApp is '+ currentBlogApp + ' , ' + 'requestId id is ' + requestId +'<br/>'); 
+   /*         res.write('currentBlogApp is '+ currentBlogApp + ' , ' + 'requestId id is ' + requestId +'<br/>'); 
             console.log('currentBlogApp is '+ currentBlogApp + '\n' + 'requestId id is ' + requestId); 
             res.write('the article title is :'+$('title').text() +'<br/>');
+            */
             var flag =  isRepeat(currentBlogApp);
             if(!flag){
               var appUrl = "http://www.cnblogs.com/mvc/blog/news.aspx?blogApp="+ currentBlogApp;
@@ -150,11 +152,44 @@ function onRequest(req,res){
        res.write("mapLimit"+url);
       retileMove(url,callback)
     },function(err,result){
-      endDate = new Date();
-       console.log('final:');
-        console.log(result);
-        console.log(catchDate);
-      console.log("mapLimit start",result,'mapLimit err end');
+		endDate = new Date();
+		console.log(catchDate);
+		console.log('final:');
+		var len=catchDate.length,
+			aveAge=0,
+			aveFans=0,
+			aveFocus=0;
+
+		for(var i=0;i<len;i++){
+			var eachDataObj=catchDate[i];
+			var eachDataStr=JSON.stringify(catchDate[i]);
+			eachDataObjFans=eachDataObj.fans||11;
+			eachDataObjFocus=eachDataObj.focus|11;
+			aveAge += parseInt(eachDataObj.age);
+			aveFans += parseInt(eachDataObjFans);
+			aveFocus+= parseInt(eachDataObjFocus);
+
+			res.write(eachDataStr+'<br/>');
+		}
+
+		//统计结果
+			res.write('<br/>');
+			res.write('<br/>');
+			res.write('/**<br/>');
+			res.write(' * 爬虫统计结果<br/>');
+			res.write('**/<br/>');
+			res.write('1、爬虫开始时间：'+ startDate +'<br/>');
+			res.write('2、爬虫结束时间：'+ endDate +'<br/>');
+			res.write('3、耗时：'+ (endDate - startDate) +'ms' +' --> '+ (Math.round((endDate - startDate)/1000/60*100)/100) +'min <br/>');
+			res.write('4、爬虫遍历的文章数目：'+ pageNum*20 +'<br/>');
+			res.write('5、作者人数：'+ len +'<br/>');
+			res.write('6、作者入园平均天数：'+ Math.round(aveAge/len*100)/100 +'<br/>');
+			res.write('7、作者人均粉丝数：'+ Math.round(aveFans/len*100)/100 +'<br/>');
+			res.write('8、作者人均关注数：'+ Math.round(aveFocus/len*100)/100 +'<br/>');
+
+        //console.log(result);
+       
+      //console.log("mapLimit start",catchDate,'mapLimit err end');
     })
 
   /* mapLimit实验
