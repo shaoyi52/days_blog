@@ -21,11 +21,10 @@ export default class ARoute extends Component{
             <Route path="/buttons" component={Buttons} />
             <Route path="/register" component={Register} />
             <Route path="/Login" component={Login} />
-            <Route path="/form" component={Form} />
+            <Route path="/forms" component={Form} />
             <Route path="/tables" component={Tables} />
         </Route>      
       </Router>
-
       )
   }  
 }
