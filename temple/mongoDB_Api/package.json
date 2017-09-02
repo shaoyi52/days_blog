@@ -6,7 +6,10 @@
   "dependencies": {
     "express": "^4.15.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.81.0"
+  },
   "scripts": {
     "start": "node app.js"
   },
