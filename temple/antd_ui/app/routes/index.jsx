@@ -15,15 +15,17 @@ import Form from '../views/Form';
 export default class ARoute extends Component{
   render(){
     return(
-      <Router  history={browserHistory} >        
-        <Route path="/"component={Layout}>     
+      <Router  history={browserHistory} > 
+
+        <Route path="/Dashboard"component={Layout}>     
             <IndexRoute   component={Dashboard} />
             <Route path="/buttons" component={Buttons} />
-            <Route path="/register" component={Register} />
-            <Route path="/Login" component={Login} />
+           
             <Route path="/forms" component={Form} />
             <Route path="/tables" component={Tables} />
-        </Route>      
+        </Route> 
+        <Route path="/register" component={Register} />
+        <Route path="*" component={Login} /> 
       </Router>
       )
   }  

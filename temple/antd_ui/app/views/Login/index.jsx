@@ -28,7 +28,7 @@ class Login extends React.Component {
     });
     const data = this.props.form.getFieldsValue()
 
-    this.props.history.replace('/home')
+    this.props.history.replace('/Dashboard')
     /*this.props.history.replace('/home');
     this.props.login(data.user, data.password).payload.promise
     then(res => {
@@ -71,7 +71,7 @@ class Login extends React.Component {
               )}
             </FormItem>
             <p>
-              <Button className="btn-login" type='primary' size="large" icon="poweroff" loading={this.state.loading} htmlType='submit'>登录</Button>
+              <Button className="btn-login" type='primary' size="large" icon="poweroff" loading={this.state.loading} htmlType='submit' >登录</Button>
             </p>
             <p>
               <Button className="btn-register" size="large" icon="right-square-o" htmlType='button' onClick={this.toRegister.bind(this)} >去注册</Button>
