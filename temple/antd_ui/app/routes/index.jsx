@@ -9,7 +9,7 @@ import Tables from '../views/Tables';
 import Login from '../views/Login';
 import Register from '../views/Register';
 import Form from '../views/Form';
-
+import Search from '../views/Search';
 
 
 export default class ARoute extends Component{
@@ -23,6 +23,7 @@ export default class ARoute extends Component{
            
             <Route path="/forms" component={Form} />
             <Route path="/tables" component={Tables} />
+            <Route path="/search" component={Search} />
         </Route> 
         <Route path="/register" component={Register} />
         <Route path="*" component={Login} /> 

@@ -155,14 +155,14 @@ router.post('/news/add',function(req,res,next){
     responseData.code=1;
     responseData.message="标题不能为空";
     res.json(responseData);
-    return res.status(200).json(responseData); ; 
+    return  
   }
 
   if(content==""||content==undefined){
     responseData.code=2;
     responseData.message="内容不能为空";
     res.json(responseData);
-    return res.json(responseData);
+    return 
   }
   var data={
       title: title,
@@ -181,7 +181,6 @@ router.post('/news/add',function(req,res,next){
   responseData.code=0;
   responseData.message='添加成功';  
   res.json(responseData);
-  return res.status(200).json(responseData); ; 
 })
 
 router.post('/news/edit',function(req,res,next){

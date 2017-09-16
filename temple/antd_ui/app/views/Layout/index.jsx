@@ -5,7 +5,7 @@ import { Route} from 'react-router';
 import {Layout, Affix , Row, Col} from 'antd';
 
 //import { childRoutes } from '../../routes'
-import Sidebar from '../../components/Sidebar'
+import Sidebar from '../../components/Sidebar/meun'
 import Header from '../../components/Header'
 
 
@@ -39,7 +39,6 @@ class App extends React.Component {
            <Footer style={{ textAlign: 'center' }}>
               React-Admin ©2017 Created by 827048849@qq.com
             </Footer>
-          
         </Layout>
         
         {/*<Layout>

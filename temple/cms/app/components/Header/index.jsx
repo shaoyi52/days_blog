@@ -8,6 +8,9 @@ const { Header} = Layout;
 class commonHeader extends React.Component {
   constructor () {
     super()
+    this.state={
+      collapsed:false
+    }
   }
 
   handleLogOut(){
@@ -43,7 +46,12 @@ class commonHeader extends React.Component {
 
     return (
       <Header style={{ background:'#fff', padding: 0}}>
-        <Row type="flex" justify="end" align="middle">
+        <Icon
+            className="trigger custom-trigger"
+            type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+            onClick={this.props.toggle}
+        />
+       {/* <Row type="flex" justify="end" align="middle">
           <Col span={3}>
             <Badge className="header-icon" count={5}>
               <Icon type="mail"/>
@@ -63,7 +71,7 @@ class commonHeader extends React.Component {
               </a>
             </Dropdown>
           </Col>
-        </Row>
+        </Row>*/}
       </Header>
     )
   }

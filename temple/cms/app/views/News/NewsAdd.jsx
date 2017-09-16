@@ -5,6 +5,7 @@ import './index.less'
 import { connect } from 'react-redux';
 
 import {fetchNewsList,receiveNews} from '../../actions'
+import ModalForm from './ModalForm';
 
 
 const FormItem = Form.Item;
@@ -72,7 +73,7 @@ class ModalForm extends Component{
       }
       let data=JSON.stringify(values);
 
-      fetch("http://localhost:3000/api/news/add",{
+      /*fetch("http://localhost:3000/api/news/add",{
         method:"POST",
         headers:{
           "Content-Type":"application/json",
@@ -92,9 +93,9 @@ class ModalForm extends Component{
           }else{
             info(json.message);
           }
-      })
+      })*/
 
-      console.log('Received values of form:',values);
+      //console.log('Received values of form:',values);
     })
   }
 

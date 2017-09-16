@@ -87,6 +87,6 @@ class ModalForm extends Component{
       </div>
       )
   }
-
 }
+
 export default ModalForm

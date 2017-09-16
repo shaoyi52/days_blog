@@ -4,40 +4,15 @@ import { browserHistory } from 'react-router'
 
 import NavPath from '../../components/NavPath'
 import BasicTable from './BasicTable';
-import NewsAdd from './NewsAdd';
+//import NewsAdd from './NewsAdd';
+import ModalForm from './ModalForm';
+import Search from './Search';
 
 import './index.less'
 
 const FormItem= Form.Item;
 
-class Search extends React.Component{
 
-  render(){
-    return(
-      <Form layout="inline">
-        <FormItem label="标题">
-            <Input  placeholder="标题"/>
-        </FormItem>
-         <FormItem label="作者">
-            <Input placeholder="作者"/>
-        </FormItem>
-        <FormItem>
-          <Button type="primary" 
-            htmlType="submit"
-            className="login-form-button"
-          >
-            搜索
-        </Button>
-        </FormItem>
-        <FormItem>
-          <NewsAdd/>            
-        </FormItem>
-      </Form>
-      )
-
-  }
-  
-}
 
 class Index extends React.Component {
   state = {

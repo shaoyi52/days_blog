@@ -3,7 +3,6 @@ export const ADD_NEWS = 'ADD_NEWS'
 export const RECEIVE_NEWS = 'RECEIVE_NEWS'
 
 
-
 function receiveNews(data){
    return {
         type: RECEIVE_NEWS,       
