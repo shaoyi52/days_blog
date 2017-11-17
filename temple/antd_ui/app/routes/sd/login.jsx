@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { Form, Input, Button, Row, Col, Icon, message } from 'antd'
 import './index.less';
 const FormItem = Form.Item;
@@ -13,14 +13,14 @@ const propTypes = {
 
 class Login extends React.Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       loading: false
     }
   }
 
-  handleSubmit (e) {
+  handleSubmit(e) {
     e.preventDefault();
     this.setState({
       loading: true
@@ -33,7 +33,7 @@ class Login extends React.Component {
       if (res.error) {
         message.error(res.payload.response.data.message);
       }
-      if (!res.error && res.payload.data)  {
+      if (!res.error && res.payload.data) {
         message.success('Welcome ' + res.payload.data.name);
         this.props.history.replace('/');
       }
@@ -44,11 +44,11 @@ class Login extends React.Component {
     })
   }
 
-  toRegister () {
+  toRegister() {
     this.props.history.replace('/register');
   }
 
-  render () {
+  render() {
     const { getFieldDecorator } = this.props.form
     return (
       <Row className="login-row" type="flex" justify="space-around" align="middle">

@@ -37,7 +37,22 @@ const allMenu = [
     url:'/site/NewsManage',
     icon:'edit',
     children:[
-      {name:'搜索列表',url:'Search'}
+      {name:'搜索列表',url:'search'}
+    ]
+  },{
+    name:'音乐模块',
+    url:'/site/music',
+    icon:'copy',
+    children:[
+      {name:'音乐列表',url:'music'}
+    ]
+  },{
+    name:'Demos',
+    url:'/site/Demos',
+    icon:'copy',
+    children:[
+      {name:'Demos',url:'demos'},
+      {name:'Practice',url:'practice'}
     ]
   }
 ]

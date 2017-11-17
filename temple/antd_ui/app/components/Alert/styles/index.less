@@ -1,0 +1,51 @@
+@import "../../style/themes/default";
+
+@alert-prefix-cls: ~"@{ant-prefix}-alert";
+
+@alert-message-color: @heading-color;
+@alert-text-color: @text-color;
+
+.@{alert-prefix-cls} {
+  position: relative;
+  padding: 8px 48px 8px 38px;
+  border-radius: @border-radius-base;
+  color: @alert-text-color;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+
+  &&-no-icon {
+    padding:8px 48px 8px 16px;
+  }
+
+  &-icon {
+    font-size: @font-size-lg;
+    top: 8px + @font-size-base * @line-height-base / 2 - @font-size-lg/2;
+    left: 16px;
+    position: absolute;
+  }
+
+  &-description {
+    font-size: @font-size-base;
+    line-height:21px;
+    display:none;
+  }
+
+  &-success {
+    border: @border-width-base @border-style-base @green-2;
+    background-color: @green-1;
+    .@{alert-prefix-cls}-icon {
+      color: @success-color;
+    }
+  }
+
+  &-close-icon {
+    font-size: @font-size-base;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    height: 12px;
+    line-height: 12px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+}
