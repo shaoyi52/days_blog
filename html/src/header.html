@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <title>网站标题，控制在25个字、50个字节以内</title>
+  <meta name="keywords" content="关键词,5个左右,单个8汉字以内">
+  <meta name="description" content="网站描述，字数尽量空制在80个汉字，160个字符以内！">
+  <link rel="Bookmark" href="favicon.ico">
+  <link rel="Shortcut Icon" href="favicon.ico" />
+  <link href="themes/css/H-ui.reset.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="themes/prettify/prettify.min.css">
+  <link href="themes/css/H-ui.css" rel="stylesheet" type="text/css" />
+  <link href="themes/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body  >
+  <div class="doc_container">
+    <h1 class="page_title">排版</h1>
+    <h2>1.1头部</h2>
+    <div class="docs-example">
+      <header class="header">
+        <div class="top">
+          <ul><li>ahxfjc@126.com</li><li>4000352610</li></ul>
+        </div>
+        <div  class="nav-inner clearfix">
+          <div class="log"><img src="http://iph.href.lu/150x48"></div>
+          <nav class="nav clearfix">
+            <ul><li><a href="#">首页<span></span></a></li><li><a href="#">产品中心</a></li><li><a href="#">新闻中心</a></li><li><a href="#">解决方案</a></li><li><a href="#">项目案例</a></li><li><a href="#">关于我们</a></li><li><a href="#">联系我们</a></li></ul>
+          </nav>
+        </div>  
+      </header>        
+    </div>
+    <h2>html代码</h2>
+    <!--http://www.css88.com/tool/html-escape/-->
+
+    <pre class="prettyprint linenums">      &lt;header class=&quot;header&quot;&gt;
+        &lt;div class=&quot;top&quot;&gt;
+          &lt;ul&gt;&lt;li&gt;ahxfjc@126.com&lt;/li&gt;&lt;li&gt;4000352610&lt;/li&gt;&lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div  class=&quot;nav-inner clearfix&quot;&gt;
+          &lt;div class=&quot;log&quot;&gt;&lt;img src=&quot;http://iph.href.lu/150x48&quot;&gt;&lt;/div&gt;
+          &lt;nav class=&quot;nav clearfix&quot;&gt;
+            &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;首页&lt;span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;产品中心&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;新闻中心&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;解决方案&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;项目案例&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;关于我们&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;联系我们&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+          &lt;/nav&gt;
+        &lt;/div&gt;  
+      &lt;/header&gt; 
+    </pre>
+    <h3>CSS代码</h3>
+    <pre class="prettyprint linenums">.top{
+  height: 30px;
+  line-height: 30px;
+  background-color: #0037a6;
+}
+.top ul{float: right;}
+.top ul li{
+  float: left;
+  margin-right:30px;
+  color: #EAE2E2;
+  font-size: 12px;  
+  
+}
+.nav-inner {
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 100px;
+}
+.nav-inner .log{ float: left; }
+.nav{ float: left; margin-left: 80px;  }
+.nav ul li{ float: left; font-size: 16px; }
+.nav ul li a{display: block;padding: 0 30px;}
+.nav ul li a:hover{
+   background-color: #0037a6;
+   color:#fff;
+}</pre>
+    
+  </div>
+  <script src="themes/js/jquery.min.js"></script>
+  <script src="themes/prettify/prettify.js"></script>
+
+</body>
+</html>

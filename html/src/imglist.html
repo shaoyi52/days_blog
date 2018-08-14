@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <title>网站标题，控制在25个字、50个字节以内</title>
+  <meta name="keywords" content="关键词,5个左右,单个8汉字以内">
+  <meta name="description" content="网站描述，字数尽量空制在80个汉字，160个字符以内！">
+  <link rel="Bookmark" href="favicon.ico">
+  <link rel="Shortcut Icon" href="favicon.ico" />
+  <link href="themes/css/H-ui.reset.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="themes/prettify/prettify.min.css">
+  <link href="themes/css/H-ui.css" rel="stylesheet" type="text/css" />
+  <link href="themes/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body  >
+  <div class="doc_container">
+    <h1 class="page_title">图片列表</h1>
+    <h2>1.1标题</h2>
+    <div class="docs-example">
+      <div class="titleBar clearfix"><i>新闻列表</i> <em><a>更多</a></em></div>
+      <div class="blockBd ">
+        <ul class="avg-lg-6 clearfix" style="margin-top: 8px;" >
+            <li>
+              <div class="imgItem">
+                <a href="#">
+                  <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
+                  <h3 class="title">远方 有一个地方 那里种有我们的梦想</h3>
+                </a>
+            </div>
+            </li>
+            <li>
+              <div class="imgItem">
+                <a href="#">
+                  <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
+                  <h3 class="title">远方 有一个地方 那里种有我们的梦想</h3>
+                </a>
+            </div>
+            </li>
+            <li>
+              <div class="imgItem">
+                <a href="#">
+                  <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
+                  <h3 class="title">远方 有一个地方 那里种有我们的梦想</h3>
+                </a>
+            </div>
+            </li>
+            <li>
+              <div class="imgItem">
+                <a href="#">
+                  <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg"  alt="远方 有一个地方 那里种有我们的梦想"/>
+                  <h3 class="title">远方 有一个地方 那里种有我们的梦想</h3>
+                </a>
+            </div>
+            </li>
+          </ul>  
+        
+      </div>
+      
+        
+      
+    </div>
+    <h2>html代码</h2>
+
+    <pre class="prettyprint linenums">&lt;div id=&quot;modal-demo&quot; class=&quot;modal fade&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot; aria-hidden=&quot;true&quot;&gt;<br>  &lt;div class=&quot;modal-dialog&quot;&gt;<br>    &lt;div class=&quot;modal-content radius&quot;&gt;<br>      &lt;div class=&quot;modal-header&quot;&gt;<br>        &lt;h3 class=&quot;modal-title&quot;&gt;对话框标题&lt;/h3&gt;<br>        &lt;a class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot; href=&quot;javascript:void();&quot;&gt;×&lt;/a&gt;<br>      &lt;/div&gt;<br>      &lt;div class=&quot;modal-body&quot;&gt;<br>        &lt;p&gt;对话框内容…&lt;/p&gt;<br>     &lt;/div&gt;<br>      &lt;div class=&quot;modal-footer&quot;&gt;<br>        &lt;button class=&quot;btn btn-primary&quot;&gt;确定&lt;/button&gt;<br>       &lt;button class=&quot;btn&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;关闭&lt;/button&gt;<br>     &lt;/div&gt;<br>    &lt;/div&gt;<br>  &lt;/div&gt;<br>&lt;/div&gt;
+
+    </pre>
+    <h3>CSS代码</h3>
+    <pre class="prettyprint linenums">h1,h2,h3,h4,h5,h6{font-weight:500;line-height:1.1;color:inherit}
+    h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small{font-weight:normal;line-height:1;color:#999}
+    h1,h2,h3{margin-top:20px;margin-bottom:10px}
+    h1 small,h2 small,h3 small,h1 .small,h2 .small,h3 .small{font-size:65%}
+    h4,h5,h6{margin-top:10px;margin-bottom:10px}
+    h4 small,h5 small,h6 small,h4 .small,h5 .small,h6 .small{font-size:75%}
+    h1{font-size:36px}
+    h2{font-size:30px}
+    h3{font-size:24px}
+    h4{font-size:18px}
+    h5{font-size:14px}
+    h6{font-size:12px}</pre>
+    <div>
+          <h3>js代码</h3>
+
+        <pre class="prettyprint linenums">
+      function init(){
+          $scope.req.getArticle();
+          $('pre code').each(function(i, block) {
+              hljs.highlightBlock(block);
+          });
+      }
+        </pre>
+    </div>
+  </div>
+  <script src="themes/js/jquery.min.js"></script>
+  <script src="themes/prettify/prettify.js"></script>
+
+</body>
+</html>

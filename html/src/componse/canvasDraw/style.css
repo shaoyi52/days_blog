@@ -1,0 +1,12 @@
+.actions {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+.actions svg {
+    width: 1.5em;
+    height: 1.5em;
+    transition: all 0.3s;
+    margin: 0 10px;
+}

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="themes/css/style.css" />
+<link rel="stylesheet" type="text/css" href="static/css/animation.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<script type="text/javascript" src="lib/jquery/jquery-1.11.2.min.js"></script> 
+
+<title>H-ui.admin v3.0</title>
+<meta name="keywords" content="网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+<meta name="description" content="完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+</head>
+<body>
+	<div class="doc_container">
+		<header>	
+		<h1>动画效果</h1>
+	</header>
+	<section class="pd-20">
+		<div class="pl-20">
+			<pre >
+<input class="btn btn-primary radius yi-animation" type="button" value="淡入" data-tra="fadein"><input class="btn btn-primary radius yi-animation" type="button" value="淡入-从上" data-tra="fadeinT"><input class="btn btn-primary radius yi-animation" type="button" value="淡入-从右" data-tra="fadeinR"><input class="btn btn-primary radius yi-animation" type="button" value="淡入-从下" data-tra="fadeinB"><input class="btn btn-primary radius yi-animation" type="button" value="淡入-从左" data-tra="fadeinL"><input class="btn btn-primary radius yi-animation" type="button" value="淡出" data-tra="fadeout"><input class="btn btn-primary radius yi-animation" type="button" value="淡出-从上" data-tra="fadeoutT"><input class="btn btn-primary radius yi-animation" type="button" value="淡出-从右" data-tra="fadeoutR"><input class="btn btn-primary radius yi-animation" type="button" value="淡出-从下" data-tra="fadeoutB"><input class="btn btn-primary radius yi-animation" type="button" value="淡出-从左" data-tra="fadeoutL"><input class="btn btn-primary radius yi-animation" type="button" value="弹跳" data-tra="bounce"><input class="btn btn-primary radius yi-animation" type="button" value="弹入" data-tra="bouncein">
+<input class="btn btn-primary radius yi-animation" type="button" value="弹入-向上" data-tra="bounceinT"><input class="btn btn-primary radius yi-animation" type="button" value="弹入-向右" data-tra="bounceinR"><input class="btn btn-primary radius yi-animation" type="button" value="弹入-向下" data-tra="bounceinB"><input class="btn btn-primary radius yi-animation" type="button" value="弹入-向左" data-tra="bounceinL"><input class="btn btn-primary radius yi-animation" type="button" value="弹出" data-tra="bounceout"><input class="btn btn-primary radius yi-animation" type="button" value="弹出-向上" data-tra="bounceoutT"><input class="btn btn-primary radius yi-animation" type="button" value="弹出-向右" data-tra="bounceoutR"><input class="btn btn-primary radius yi-animation" type="button" value="弹出-向下" data-tra="bounceoutB"><input class="btn btn-primary radius yi-animation" type="button" value="弹出-向左" data-tra="bounceoutL"><input class="btn btn-primary radius yi-animation" type="button" value="转入" data-tra="rotatein"> 
+<input class="btn btn-primary radius yi-animation" type="button" value="转入-左上" data-tra="rotateinLT"> <input class="btn btn-primary radius yi-animation" type="button" value="转入-左下" data-tra="rotateinLB"> <input class="btn btn-primary radius yi-animation" type="button" value="转入-右上" data-tra="rotateinRT"><input class="btn btn-primary radius yi-animation" type="button" value="转入-右下" data-tra="rotateinRB"> 
+
+<div class="text-c mt-30"><input id="text" class="" type="button" value="hui-wobble"></div>
+			</pre>
+		</div>
+		
+		
+	</section>
+	<footer>
+	</footer>
+	</div>
+	<script type="text/javascript">
+     $(".yi-animation").on('click',function(){
+        var tra=$(this).attr("data-tra");
+        $('#text').val(tra);
+        $('#text').removeClass();
+        $('#text').addClass(tra)
+     })
+     
+     $('#text').on({
+      'animationend':function(){
+        $('#text').removeClass()},
+        'webkitAnimationEnd':function(){
+          $('#text').removeClass()}
+     })
+
+  </script>
+</body>
+</html>

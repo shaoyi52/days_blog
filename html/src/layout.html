@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <title>网站标题，控制在25个字、50个字节以内</title>
+  <meta name="keywords" content="关键词,5个左右,单个8汉字以内">
+  <meta name="description" content="网站描述，字数尽量空制在80个汉字，160个字符以内！">
+  <link rel="Bookmark" href="favicon.ico">
+  <link rel="Shortcut Icon" href="favicon.ico" />
+  <link href="static/css/index.css" rel="stylesheet" type="text/css" />
+  <link href="themes/css/H-ui.reset.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="themes/prettify/prettify.min.css">
+  <link href="themes/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="themes/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body  >
+  <div class="doc_container">
+    <h1 class="page_title">列表</h1>
+    <h2>1.1标题</h2>
+    <div class="docs-example">
+      <div class="ant-layout">
+        <div class="ant-layout-header">Header</div>
+        <div class="ant-layout-content">Content</div>
+        <div class="ant-layout-footer">Footer</div>
+      </div> 
+     
+      
+    </div>
+    <h2>html代码</h2>
+
+    <pre class="prettyprint linenums">&lt;div class=&quot;boxContent&quot;&gt;
+        &lt;div class=&quot;titleBar clearfix&quot;&gt;&lt;i&gt;新闻列表&lt;/i&gt; &lt;em&gt;&lt;a&gt;更多&lt;/a&gt;&lt;/em&gt;&lt;/div&gt;
+        &lt;ul class=&quot;newsList&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;东南卫视：莆田公共资源交易启用东信智能人证合一核验&lt;/a&gt;&lt;span&gt;[11-24]&lt;/span&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;boxContent border&quot;&gt;
+        &lt;div class=&quot;titleBar&quot;&gt;产品分类&lt;/div&gt;  
+        &lt;div class=&quot;box-bd&quot;&gt;
+          &lt;ul class=&quot;newsList&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;东南卫视：莆田公共资源交易启用东信智能人证合一核验&lt;/a&gt;&lt;span&gt;[11-24]&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;东南卫视：莆田公共资源交易启用东信智能人证合一核验&lt;/a&gt;&lt;span&gt;[11-24]&lt;/span&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;/div&gt;  
+      &lt;/div&gt;
+    </pre>
+    <h3>CSS代码</h3>
+    <pre class="prettyprint linenums">h1,h2,h3,h4,h5,h6{font-weight:500;line-height:1.1;color:inherit}
+    h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small{font-weight:normal;line-height:1;color:#999}
+    h1,h2,h3{margin-top:20px;margin-bottom:10px}
+    h1 small,h2 small,h3 small,h1 .small,h2 .small,h3 .small{font-size:65%}
+    h4,h5,h6{margin-top:10px;margin-bottom:10px}
+    h4 small,h5 small,h6 small,h4 .small,h5 .small,h6 .small{font-size:75%}
+    h1{font-size:36px}
+    h2{font-size:30px}
+    h3{font-size:24px}
+    h4{font-size:18px}
+    h5{font-size:14px}
+    h6{font-size:12px}</pre>
+    <div>
+          <h3>js代码</h3>
+
+        <pre class="prettyprint linenums">
+      function init(){
+          $scope.req.getArticle();
+          $('pre code').each(function(i, block) {
+              hljs.highlightBlock(block);
+          });
+      }
+        </pre>
+    </div>
+  </div>
+  <script src="themes/js/jquery.min.js"></script>
+  <script src="themes/prettify/prettify.js"></script>
+
+</body>
+</html>

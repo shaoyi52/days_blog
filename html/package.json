@@ -1,0 +1,21 @@
+{
+  "name": "Sass chances",
+  "version": "1.0.0",
+  "description": "myproject content files",
+  "main": "index.js",
+  "scripts": {
+    "test": "mytest"
+  },
+  "author": "yuyi",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-connect": "^5.5.0",
+    "gulp-less": "^3.5.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "path": "^0.12.7"
+  }
+}

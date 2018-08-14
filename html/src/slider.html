@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <title>网站标题，控制在25个字、50个字节以内</title>
+  <meta name="keywords" content="关键词,5个左右,单个8汉字以内">
+  <meta name="description" content="网站描述，字数尽量空制在80个汉字，160个字符以内！">
+  <link rel="Bookmark" href="favicon.ico">
+  <link rel="Shortcut Icon" href="favicon.ico" />
+  <link href="themes/css/H-ui.reset.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="themes/prettify/prettify.min.css">
+  <link href="themes/css/H-ui.css" rel="stylesheet" type="text/css" />
+  <link href="themes/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body  >
+  <div class="doc_container">
+    <h1 class="page_title">排版</h1>
+    <h2>1.1轮播图</h2>
+    <div class="docs-example">
+      <div id="slider-2">
+        <div class="slider">
+          <div class="bd">
+            <ul>
+              <li style="background-image:url(http://lib.h-ui.net/jquery.SuperSlide/2.1.1/demo/02/images/banner-1.jpg)"></li>
+              <li style="background-image:url(http://lib.h-ui.net/jquery.SuperSlide/2.1.1/demo/02/images/banner-2.jpg)"></li>
+              <li style="background-image:url(http://lib.h-ui.net/jquery.SuperSlide/2.1.1/demo/02/images/banner-3.jpg)"></li>
+            </ul>
+          </div>
+          <ol class="hd dots cl">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <h2>html代码</h2>
+    <!--http://www.css88.com/tool/html-escape/-->
+
+    <pre class="prettyprint linenums"> 
+
+    </pre>
+    <h3>CSS代码</h3>
+    <pre class="prettyprint linenums">
+      
+    </pre>
+    
+  </div>
+  <script src="themes/js/jquery.min.js"></script>
+  <script src="themes/prettify/prettify.js"></script>
+  <script src="themes/js/jquery.SuperSlide.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    jQuery("#slider-2").slide({mainCell:".bd ul",titCell:".hd li",trigger:"click",effect:"leftLoop",autoPlay:true,delayTime:700,interTime:7000,pnLoop:false,titOnClassName:"active"});
+  });
+  </script> 
+</body>
+</html>
