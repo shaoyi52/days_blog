@@ -1,0 +1,28 @@
+NodeJS+Express+MongoDB
+
+postman api测试工具
+
+测试：
+
+新闻添加
+url:http://localhost:3800/news
+type:"post"
+param:{"title":"新闻标题","title":"新闻内容"}
+
+新闻查询 默认显示10条 可加id单条查询
+url:http://localhost:3800/news
+type:"get"
+param:{"id":"5b32061a5c8343505886529d"}
+
+新闻更新 必须传id
+
+url:http://localhost:3800/news
+type:"put"
+param:{"id":"5b32061a5c8343505886529d"}
+
+新闻删除 必须传id
+
+url:http://localhost:3800/news
+type:"delete"
+param:{"id":"5b32061a5c8343505886529d"}
+
