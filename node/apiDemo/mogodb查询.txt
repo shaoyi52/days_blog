@@ -1,0 +1,57 @@
+启动MongoDB
+mongo
+
+创建集合
+example:db.createCollection(name, options)
+
+切换数据库 
+example:use dbsName
+
+显示所有数据库：
+example:show dbs
+
+显示所有集合：show 
+example:
+show collections
+
+
+集合中插入文档 db.COLLECTION_NAME.insert(document)
+example：
+db.mycol.insert({
+   _id: 100,
+   title: 'MongoDB Overview', 
+   description: 'MongoDB is no sql database',
+   by: 'yiibai tutorials',
+   url: 'http://www.yiibai.com',
+   tags: ['mongodb', 'database', 'NoSQL'],
+   likes: 100,
+})
+
+集合中查询文档 db.COLLECTION_NAME.find(document)
+example：
+db.mycol.find().pretty()
+{
+   "_id": 100,
+   "title": "MongoDB Overview", 
+   "description": "MongoDB is no sql database",
+   "by": "yiibai tutorials",
+   "url": "http://www.yiibai.com",
+   "tags": ["mongodb", "database", "NoSQL"],
+   "likes": "100"
+}
+查询前5条 db.news.find().limit(5)
+
+更新现有文档中的值 db.COLLECTION_NAME.update(SELECTION_CRITERIA, UPDATED_DATA)
+example：
+db.mycol.find({}, {'_id':1, 'title':1}) 
+
+集合中删除文档 remove()
+example：
+db.mycol.remove({'_id':100})
+
+
+删除集合：drop() 
+example：
+db.mycollections.drop()
+
+ 

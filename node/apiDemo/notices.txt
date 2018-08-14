@@ -1,0 +1,24 @@
+NodeJS+Express+MongoDB
+
+
+https://www.cnblogs.com/best/p/6212807.html
+安装MongoDB
+
+Mongoose 增 删 改 查
+https://segmentfault.com/a/1190000006123880?_ea=1022680
+
+
+node-supervisor  node.js启动工具
+
+npm install supervisor -g
+
+npm link supervisor 
+
+它运行您的程序，并监视代码更改，因此您可以使用热代码重新加载ISH行为，而不必担心内存泄漏，并确保清理所有模块间引用
+
+
+接口测试工具Postman
+
+nodejs + express + mongodb + mongoose + es6/7 + vue + element-ui
+
+
