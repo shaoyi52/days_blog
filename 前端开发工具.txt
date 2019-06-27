@@ -1,18 +1,21 @@
-TortoiseGit     ---�汾����
-Sourcetree      ---git�汾����
-vscode          ----���빤��
-ʰɫ�� 
-TeamViewer      ----Զ�̹���
-Photoshop CS6   ----ͼ��������
-psiphon3.exe    ----��ǽ����
-FlashFTP�ƽ��1 ----ftp�ϴ�����
-Editplus        ----���빤��
+﻿TortoiseGit                      ---版本管理
+Sourcetree                       ---git版本工具
+vscode                           ----编码工具
+拾色器 
+TeamViewer                       ----远程工具
+Photoshop CS6                    ----图像处理工具
+psiphon3.exe                     ----翻墙工具
+FlashFTP破解版1                  ----ftp上传工具
+Editplus                         ----编码工具
+postman                          ----接口测试工具
 
-node            ----ǰ�˻���
+node                             ----前端环境
+Atom                             ---markDown编辑器 编码工具
 
+mongodb                          ----NoSQL  
+Navicat_Premium(jb51.net)        ----数据库管理工具
 
-
-��������������ѡ��������������������������
-TortoiseSVN     ---�汾����
-Sublime         ---���빤��
-WebStorm         ---���빤��
+——————待选择软件——————————
+TortoiseSVN     ---版本工具
+Sublime         ---编码工具
+WebStorm         ---编码工具
