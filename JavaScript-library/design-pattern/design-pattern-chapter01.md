@@ -25,7 +25,7 @@ module.exports = {
 > 在webpack.dev.config.js中，我们做了两件事：
 > 1. 告知webpack我们的入口文件（需要被解析的ES6文件）在根目录的src下的index.js； 
 > 2. 告知webpack我们的出口文件（被解析后的ES5文件）需要打包到的位置是相对于当前目录的dist/src下的index.js。
-<br>
+
 5. 修改package.json文件
 > package.json
 ```
@@ -52,7 +52,7 @@ module.exports = {
 ```
 > 在这里，我们修改了"scripts"部分，告知npm在` npm run dev `的时候，记的使用webpack命令，用开发模式来解析配置文件webpack.dev.config.js。
 6. 执行命令行：` nmp run dev `,可以查看根目录中生成了dist文件夹
-<br>
+
 ### 1.2动态打包JavaScript
 &emsp; **本节实现目的**：部署个能按 Ctrl+S,就能自动更新代码的webpack环境
 1. 执行命令行：` cnpm i webpack-dev-server html-webpack-plugin -D `,安装webpack的deServer,这个能启动开发模式实时监控代码的webpack配置；同时，安装html-webpack-plugin,这个能解析HTML的插件。
@@ -127,7 +127,7 @@ module.exports = {
 }
 ```
 5. 执行命令行：`npm run dev` ,浏览器自动打开`http://localhost.8080`
-<br>
+
 ### 1.3自动打包ES6
 &emsp;**本节实现目的**：部署个能按Ctrl+S,就能自动打包ES6为ES5，并且能自动更新代码的Webpack环境。
 1. 执行命令行：`cnpm i babel-core babel-loader babel-polyfill babel-preset-env -D`,安装ES6对应的解析配置，执行完毕后package.json会自动新增依赖包：
@@ -221,7 +221,7 @@ let person=new Person("yuyi")
 alert(person.getName());
 ```
 5. 执行命令行：`npm run dev` ,即可看到HTML页面弹窗 **yuyi**
-<br>
+
 ### 1.4 完善配置
 &emsp; **本节实现目的**：`npm run dev`命令下，部署个能按Ctrl+S,就能自动打包ES6为ES5,并且能自动更代码的webpack环境。`npm run build`命令下，能打包文件到dist目录。
 1. 新增webpack.prod.config.js,用作打包生产：
