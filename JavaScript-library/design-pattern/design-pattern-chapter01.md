@@ -130,7 +130,7 @@ module.exports = {
 
 ### 1.3自动打包ES6
 &emsp;**本节实现目的**：部署个能按Ctrl+S,就能自动打包ES6为ES5，并且能自动更新代码的Webpack环境。
-1. 执行命令行：`cnpm i babel-core babel-loader babel-polyfill babel-preset-env -D`,安装ES6对应的解析配置，执行完毕后package.json会自动新增依赖包：
+1. 执行命令行：`cnpm i babel-loader @babel/core @babel/preset-env babel-polyfill  -D`,安装ES6对应的解析配置，执行完毕后package.json会自动新增依赖包：
 > package.json
 ```
 {
@@ -149,23 +149,25 @@ module.exports = {
   "author": "yuyi",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
+    "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   }
 }
 ``` 
-2. 新建.babelrc文件，该文件为ES6解析到ES5必须使用的文件（注，现在市面上大部分浏览器还不能完全直接解析ECMA Script2015语法，所以只能将ES6转为ES5，就用到了.babelrc文件）：
+2. 新建.babelrc文件，该文件为ES6解析到ES5必须使用的文件（注，现在市面上大部分浏览器还不能完全直接解析ECMA Script2015语法，所以只能将ES6转为ES5，就用到了.babelrc文件; webpack 4.2以上使用）：
 > .babelrc
 ```
 {
     "presets": [
-        "env"
+        "@babel/preset-env"
     ],
     "plugins": [
         
