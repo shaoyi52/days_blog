@@ -27,7 +27,7 @@ module.exports = {
 > 2. 告知webpack我们的出口文件（被解析后的ES5文件）需要打包到的位置是相对于当前目录的dist/src下的index.js。
 <br>
 5. 修改package.json文件
->package.json
+> package.json
 ```
 {
   "name": "design-pattern",
