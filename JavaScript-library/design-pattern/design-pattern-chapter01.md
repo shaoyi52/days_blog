@@ -42,7 +42,7 @@ module.exports = {
     "design",
     "pattern"
   ],
-  "author": "jsliang",
+  "author": "yuyi",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^4.16.5",
@@ -116,7 +116,7 @@ module.exports = {
     "design",
     "pattern"
   ],
-  "author": "jsliang",
+  "author": "yuyi",
   "license": "ISC",
   "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
@@ -146,7 +146,7 @@ module.exports = {
     "design",
     "pattern"
   ],
-  "author": "jsliang",
+  "author": "yuyi",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -223,4 +223,95 @@ alert(person.getName());
 5. 执行命令行：`npm run dev` ,即可看到HTML页面弹窗 **yuyi**
 <br>
 ### 1.4 完善配置
-&
+&emsp; **本节实现目的**：`npm run dev`命令下，部署个能按Ctrl+S,就能自动打包ES6为ES5,并且能自动更代码的webpack环境。`npm run build`命令下，能打包文件到dist目录。
+1. 新增webpack.prod.config.js,用作打包生产：
+> webpack.prod.config.js,用作打包生产：
+```
+const path = require('path'); // 加载node中的path模块
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // 加载插件html-webpack-plugin
+
+module.exports = {
+    mode: 'production', // 生产模式
+    entry: './src/index.js', // 入口文件
+    output: { // 出口文件
+        path: __dirname + '/dist',
+        filename: './js/index.js'
+    },
+    module: { // 加载模块
+        rules: [{ 
+            test: /\.js$/, // .js文件加载loader
+            include: path.resolve(__dirname, "./src"), // 检查的文件夹
+            exclude: path.resolve(__dirname, "./node_modules"), // 不检查的文件夹
+            loader: 'babel-loader' // 使用的loader
+        }]
+    },
+    plugins: [ 
+        new HtmlWebpackPlugin({ // HTML加载插件
+            template: './index.html'
+        })
+    ]
+```
+2. 修改下package.json,使其能使用命令行`npm run build`:
+> package.json
+```
+{
+    "name": "design-pattern",
+    "version": "1.0.0",
+    "description": "design pattern for javascript",
+    "main": "index.js",
+    "scripts": {
+      "dev": "webpack-dev-server --config ./webpack.dev.config.js",
+      "build": "webpack --config ./webpack.dev.config.js"
+    },
+    "keywords": [
+      "javascript",
+      "design pattern"
+    ],
+    "author": "yuyi",
+    "license": "ISC",
+    "devDependencies": {
+      "babel-core": "^6.26.3",
+      "babel-loader": "^7.1.5",
+      "babel-polyfill": "^6.26.0",
+      "babel-preset-env": "^1.7.0",
+      "html-webpack-plugin": "^3.2.0",
+      "webpack": "^4.16.5",
+      "webpack-cli": "^3.1.0",
+      "webpack-dev-server": "^3.1.5"
+    }
+}
+```
+3. 完善下webpack.dev.config.js:
+> webpack.dev.config.js
+```
+const path = require('path'); // 加载node中的path模块
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // 加载插件html-webpack-plugin
+
+module.exports = {
+    mode: 'development', // 开发模式
+    entry: './src/index.js', // 入口文件
+    output: { // 出口文件
+        path: __dirname + '/dist',
+        filename: './js/index.js'
+    },
+    module: { // 加载模块
+        rules: [{ 
+            test: /\.js$/, // .js文件加载loader
+            include: path.resolve(__dirname, "./src"), // 检查的文件夹
+            exclude: path.resolve(__dirname, "./node_modules"), // 不检查的文件夹
+            loader: 'babel-loader' // 使用的loader
+        }]
+    },
+    plugins: [ 
+        new HtmlWebpackPlugin({ // HTML加载插件
+            template: './index.html'
+        })
+    ],
+    devServer: { // 开发服务
+        contentBase: path.join(__dirname, './dist'), // 监控的目录
+        open: true, // 自动打开浏览器
+        port: 9000, // 端口
+        host: "192.168.1.107" // WiFi IPV4地址，打开可共享到手机
+    }
+}
+```
