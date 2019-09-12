@@ -1,3 +1,11 @@
-Foxmail           ---�ʼ��ͻ���
-Atom              ---markDown�༭��
+﻿Foxmail           ---邮件客户端
+Atom              ---markDown编辑器
 Node.js
+
+Atlassian主要有5款产品，分别面向不同的市场。
+
+JIRA（项目任务管理软件）
+Confluence（企业知识管理与协同软件）
+BitBucket（代码库）
+HipChat（内部聊天/协作软件）
+JIRA Service Desk（服务台软件）

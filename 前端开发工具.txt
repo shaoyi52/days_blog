@@ -21,3 +21,12 @@ Axure RP Extension for Chrome   ----原型图查看
 TortoiseSVN     ---版本工具
 Sublime         ---编码工具
 WebStorm         ---编码工具
+
+
+Atlassian主要有5款产品，分别面向不同的市场。
+
+JIRA（项目任务管理软件）
+Confluence（企业知识管理与协同软件）
+BitBucket（代码库）
+HipChat（内部聊天/协作软件）
+JIRA Service Desk（服务台软件）

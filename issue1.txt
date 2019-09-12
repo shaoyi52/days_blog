@@ -1,0 +1,16 @@
+﻿Map()
+
+ComponetPackge//写组件及组件打包引入
+
+TypeScript
+TypeScript 具有以下特点：
+
+TypeScript 是 Microsoft 推出的开源语言，使用 Apache 授权协议
+
+TypeScript 增加了静态类型、类、模块、接口和类型注解
+
+TypeScript 可用于开发大型的应用
+
+TypeScript 易学易于理解
+
+
