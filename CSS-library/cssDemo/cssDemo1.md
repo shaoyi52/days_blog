@@ -47,3 +47,14 @@ CSS代码如下：
       }
   </style>
 ```
+
+3.防止外边距重叠解决方案
+```
+外层元素padding代替
+外层元素 overflow:hidden;
+
+内层元素绝对定位 postion:absolute:
+内层元素 加float:left;或display:inline-block;
+内层元素padding:1px;
+内层元素透明边框 border:1px solid transparent;
+```
