@@ -10,3 +10,4 @@
 *[剑指Offer](https://github.com/Jack-Cherish/LeetCode)
 * [数据结构专题](http://www.conardli.top/docs/dataStructure/%E4%BA%8C%E5%8F%89%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91.html)
 * [前端应该如何准备数据结构和算法](https://mp.weixin.qq.com/s/SXUESfT5oN2Cfa2snTrw0Q)
+* [数据结构与算法思想](https://mp.weixin.qq.com/s/EFil0A_ylv_PCreVj-SebA)
