@@ -16,6 +16,25 @@ promise= new Promise((resolve,reject)=>{
 })
 promise.then(res=>{console.log("res",res)},err=>{console.log('err',err)})
 ```
+## promise.all([]).then(result=>{}).catch(err=>{})
+```
+let wake=(time)=>{
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      console.log(time/1000+ '秒苏醒了')
+      resolve(time/1000+ '秒苏醒了')    
+    },time) 
+  })
+}
+let p1=wake(3000);
+let p2=wake(4000);
+let p3=wake(5000);
+Promise.all([p1,p2,p3]).then(result=>{
+  console.log(result)
+}).catch(err=>{
+  console.log(err)
+})
+```
 ## ES7 Async/Await
 1. 用法：
  使用async 声明函数，在async函数内使用await 
