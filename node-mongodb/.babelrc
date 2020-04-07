@@ -1,0 +1,8 @@
+{
+  	"presets": ["stage-3"],
+  	"plugins": [
+        "dynamic-import-node",
+  		    "transform-async-to-generator",
+        "transform-es2015-modules-commonjs",
+    ]
+}

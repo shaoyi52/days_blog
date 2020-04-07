@@ -1,0 +1,46 @@
+rules
+
+this.loadAllRules(rules);
+caculatelRules=[{
+    "id": "06100102070600011B",
+    "type": "11",
+    "desc": "批量小规模销售总额计算,货物销售+服务销售",
+    "formula": function ({ param, item, funcs }) {
+        return item.ze = funcs.jsxxze(item.khdjxh, param.zpdk + param.zpzk + param.ppzk + param.ppwk);
+    },
+    "target": "",
+    "tips": ""
+}]
+
+rlt=this.executeRules(resItem, item.paramIndex)
+
+retItems=executeRules(caculatelRules, items, paramIndex, this.exportFunctions)
+
+
+
+
+executeRules (caculatelRules, items, paramIndex, customFunc) {
+    // formulaFunction为公共函数对象
+    const funcs = { ...formulaFunction, ...customFunc };
+    items.forEach(item => {
+        let itemIndex = item.idx;
+        if(paramIndex){
+            caculatelRules.forEach(rule => {
+                let formula = rule.formula;
+                let id = rule.id;
+                formula({item, param: item.params[paramIndex], funcs});
+            });
+        } else {
+            let params = item.params;
+            params.forEach((param, index) => {
+                caculatelRules.forEach(rule => {
+                    let formula = rule.formula;
+                    let id = rule.id;
+                    formula({item, param, funcs});
+                });
+            });
+        }
+    });
+
+    return items;
+}
