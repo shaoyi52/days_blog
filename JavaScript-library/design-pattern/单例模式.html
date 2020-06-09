@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>yuzhoufen的设计模式</title>
+</head>
+<body>
+    <p>yuzhoufen的设计模式</p>
+    <button id="btn1">打开</button>
+    <button id="btn2">关闭</button>
+    
+    <script type="text/javascript">
+    var Modal=function(id,html){
+        this.id=id;
+        this.html=html;
+        this.open=false;
+    }
+    Modal.prototype.create=function(){
+        if(!this.open){
+            let modal=document.createElement("div");
+            modal.innerHTML=this.html;
+            modal.id=this.id;
+            document.body.append(modal)
+            this.open=true;
+            modal.classList.add("show")
+        }        
+    }
+    Modal.prototype.delete=function(){
+        if(this.open){
+            let modal=document.getElementById(this.id)       
+            document.body.removeChild(modal);
+            this.open=false;
+            modal.classList.add("hide")
+        }
+        
+    }
+    var creatInstance=(function(){
+        let instance;
+
+        return function(){
+            return instance||(instance=new Modal("btns","第一个弹窗"));
+        }
+
+    })()
+   
+    var operate={
+        setmodal:null,
+        open:function(){
+            this.setmodal=creatInstance()
+            this.setmodal.create()
+        },
+        close:function(){
+            this.setmodal?this.setmodal.delete():""
+        }
+    }
+
+    document.getElementById("btn1").onclick=function(){
+        operate.open()
+    }
+    document.getElementById("btn2").onclick=function(){
+        operate.close()
+    }
+    </script>
+</body>
+</html>
