@@ -132,7 +132,7 @@
                     this.$store.commit('addOpenSubmenu', pathArr[1].name);
                 }
                 console.log(Cookies.get('user'));
-                this.userName = JSON.parse(Cookies.get('user')).name;
+                //this.userName = JSON.parse(Cookies.get('user')).name;
                 let messageCount = 3;
                 this.messageCount = messageCount.toString();
                 this.checkTag(this.$route.name);

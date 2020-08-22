@@ -208,6 +208,7 @@
                 };
                 this.loading = true;
                 util.post.reptile.list(obj).then((data) => {
+                    //console.log("dd",data)
                     this.reptileList = data.reptileList;
                     this.total = data.count;
                     this.loading = false;

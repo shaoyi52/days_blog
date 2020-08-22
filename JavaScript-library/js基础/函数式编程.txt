@@ -1,0 +1,12 @@
+
+add=function(arg1,arg2){return arg1+arg2}
+
+sub=function(arg1,arg2){return arg1-arg2}
+
+div=function(arg1,arg2){return arg1/arg2}
+
+mul=function(arg1,arg2)｛return arg1*arg2｝
+
+25/5*3+10-2=23
+
+sub(add(mul(div(25,5),3),10),2)

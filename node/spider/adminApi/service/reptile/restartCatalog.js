@@ -5,8 +5,8 @@ const {
   iconv,
   tool,
   log,
-  db
-} = require("../tool/require");
+  db,
+} = require("../../tool/require");
 
 let getCatalog = require("../../reptileTool/getCatalog.js");
 
@@ -18,17 +18,19 @@ async function restartCatalog(errorId, tiType) {
     }
     let selectSql = `progresserror.*,catalog.num`;
     let joinSql = `JOIN catalog on catalog.id=progresserror.catalogId`;
-    let errorObj = (await db.query(
-      `select ${selectSql} from progresserror ${joinSql} where progresserror.id`
-    ))[0];
+    let errorObj = (
+      await db.query(
+        `select ${selectSql} from progresserror ${joinSql} where progresserror.id=${errorId}`
+      )
+    )[0];
     if (!errorObj) {
       reject("errorId错误");
       return;
     }
     let catalog = {
       name: errorObj.catalogName,
-      reptileAdddress: errobj.retileAddress,
-      id: errorObj.catalogId
+      reptileAddress: errorObj.reptileAddress,
+      id: errorObj.catalogId,
     };
     /***只爬取一章 */
     tool.catalogQueue.push({
@@ -40,21 +42,21 @@ async function restartCatalog(errorId, tiType) {
         catalog,
         true,
         20000,
-        tiType
+        tiType,
       ],
       pro: getCatalog,
       result: () => {
         end(errorObj, resolve, reject);
       },
-      error: err => {
+      error: (err) => {
         log.error(err);
         end(errorObj, resolve, reject, err ? err : true);
-      }
+      },
     });
 
     /**爬取结束执行函数，第四个布尔值为true,则表示爬取失败 */
     async function end(errorObj, resolve, reject, err) {
-      let whereSql = `where bookName=${errorObj.bookName} and catalogName =${errorObj.catalogName} and bookId=${errorObj.bookId} and catalogId=${errorObj.catalogId} and reptileAddress = ${errorObj.reptileAddress} and orginUrl= ${errorObj.originUrl}`;
+      let whereSql = `where bookName="${errorObj.bookName}" and catalogName ="${errorObj.catalogName}" and bookId=${errorObj.bookId} and catalogId=${errorObj.catalogId} and reptileAddress = "${errorObj.reptileAddress}" and originUrl= "${errorObj.originUrl}"`;
       if (err) {
         //删除progresserror表里匹配这个错误除自己外的其他列表
         whereSql += ` and id!=${errorObj.id}`;
@@ -71,5 +73,13 @@ async function restartCatalog(errorId, tiType) {
     }
   });
 }
-
-module.exports = restartCatalog;
+async function start() {
+  try {
+    let data = await restartCatalog(2, 1);
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+start();
+//module.exports = restartCatalog;

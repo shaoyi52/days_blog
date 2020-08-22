@@ -4,7 +4,9 @@
   "description": "1.1.0",
   "main": "spider.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "service": "nodemon adminApi/bin/www.js",
+    "start": "nodemon adminApi/bin/www.js"
   },
   "keywords": [
     "spider"

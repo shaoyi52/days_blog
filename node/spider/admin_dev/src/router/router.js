@@ -5,36 +5,36 @@ export const loginRouter = {
   path: "/login",
   name: "login",
   meta: {
-    title: "Login - 登录"
+    title: "Login - 登录",
   },
-  component: () => import("@/views/login.vue")
+  component: () => import("@/views/login.vue"),
 };
 
 export const page404 = {
   path: "/*",
   name: "error-404",
   meta: {
-    title: "404-页面不存在"
+    title: "404-页面不存在",
   },
-  component: () => import("@/views/error-page/404.vue")
+  component: () => import("@/views/error-page/404.vue"),
 };
 
 export const page403 = {
   path: "/403",
   meta: {
-    title: "403-权限不足"
+    title: "403-权限不足",
   },
   name: "error-403",
-  component: () => import("@//views/error-page/403.vue")
+  component: () => import("@//views/error-page/403.vue"),
 };
 
 export const page500 = {
   path: "/500",
   meta: {
-    title: "500-服务端错误"
+    title: "500-服务端错误",
   },
   name: "error-500",
-  component: () => import("@/views/error-page/500.vue")
+  component: () => import("@/views/error-page/500.vue"),
 };
 
 // export const preview = {
@@ -48,7 +48,7 @@ export const locking = {
   path: "/locking",
   name: "locking",
   component: () =>
-    import("@/views/main-components/lockscreen/components/locking-page.vue")
+    import("@/views/main-components/lockscreen/components/locking-page.vue"),
 };
 
 // 作为Main组件的子页面展示但是不在左侧菜单显示的路由写在otherRouter里
@@ -62,12 +62,12 @@ export const otherRouter = {
       path: "ownspace",
       title: "个人中心",
       name: "ownspace_index",
-      component: () => import("@/views/own-space/own-space.vue")
-    }
+      component: () => import("@/views/own-space/own-space.vue"),
+    },
     // { path: 'order/:order_id', title: '订单详情', name: 'order-info', component: () => import('@/views/advanced-router/component/order-info.vue') }, // 用于展示动态路由
     // { path: 'shopping', title: '购物详情', name: 'shopping', component: () => import('@/views/advanced-router/component/shopping-info.vue') }, // 用于展示带参路由
     // { path: 'message', title: '消息中心', name: 'message_index', component: () => import('@/views/message/message.vue') }
-  ]
+  ],
 };
 
 // export const otherRouter = {
@@ -119,21 +119,48 @@ export const appRouter = [
         path: "403",
         title: "403-权限不足",
         name: "error-403",
-        component: () => import("@/views/error-page/403.vue")
-      }
-    ]
-  },  
-  {
-      path: '/reptile-tool',
-      icon: 'ios-flower-outline',
-      title: '爬取配置',
-      name: 'reptile-tool',
-      component: Main,
-      //access:["2000","4000"],
-      children: [
-          { path: 'channel', title: '来源渠道',  name: 'reptile-tool', component: () => import('@/views/reptile-tool/channel.vue') },
-      ]
+        component: () => import("@/views/error-page/403.vue"),
+      },
+    ],
   },
+  {
+    path: "/reptile-tool",
+    icon: "ios-flower-outline",
+    title: "爬取配置",
+    name: "reptile-tool",
+    component: Main,
+    //access:["2000","4000"],
+    children: [
+      {
+        path: "channel",
+        title: "来源渠道",
+        name: "channel",
+        component: () => import("@/views/reptile-tool/channel.vue"),
+      },
+      {
+        path: "progress-error",
+        title: "爬取错误/遗漏",
+        name: "reptile-error",
+        component: () => import("@/views/reptile-tool/progress-error.vue"),
+      },
+    ],
+  },
+  {
+    path: "/write",
+    icon: "ios-image",
+    title: "作家专区",
+    name: "write-tool",
+    component: Main,
+    children: [
+      {
+        path: "index",
+        title: "我的书籍",
+        name: "write-list",
+        component: () => import("@/views/writer/bookList.vue"),
+      },
+    ],
+  },
+
   // {
   //     path: '/access',
   //     icon: 'key',
@@ -376,6 +403,6 @@ export const routers = [
   //locking,
   ...appRouter,
   //page500,
-  page403
+  page403,
   //page404
 ];
