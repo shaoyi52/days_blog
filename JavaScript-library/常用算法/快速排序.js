@@ -1,4 +1,4 @@
-const arr=[3,4,8,2,23,45,3,6,9,10]
+﻿const arr=[3,4,8,2,23,45,3,6,9,10]
 let quiteQueue=(arr)=>{
 	if(arr.length<=1) return arr;
 	let left=[],right=[];
@@ -8,3 +8,6 @@ let quiteQueue=(arr)=>{
 	return quiteQueue(left).concat(middle,quiteQueue(right))
 }
 document.write(quiteQueue(arr))
+
+分析
+https://blog.csdn.net/nrsc272420199/article/details/82587933
