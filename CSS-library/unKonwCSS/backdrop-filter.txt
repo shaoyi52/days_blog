@@ -1,0 +1,19 @@
+±³¾°¹ýÂËÆ÷====¡·±³¾°ÒõÓ°
+<div class="container">
+  <img src="https://ichef.bbci.co.uk/images/ic/976x549_b/p0121stm.jpg">
+  <div class="caption">
+    <h3>Morgana</h3>
+    <p>played by Katie McGrath</p>
+  </div>
+</div>
+
+
+.caption {
+  padding: 0.5em 1em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.5);
+}

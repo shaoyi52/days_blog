@@ -8,6 +8,17 @@
 - 生命周期中经常包含一些莫名其妙的不相关逻辑
 - 类组件难以被机器和人理解
 
+## hooks接口(共10个)
+* useCallback;
+* useContext;
+* useDebugValue;
+* useEffect;
+* useImperativeHandle;
+* useLayoutEffect;
+* useMemo;
+* useReducer;
+* useRef;
+* useState;
 ## 参考资料
 
 [hooks 官方文档](https://reactjs.org/docs/hooks-intro.html)
