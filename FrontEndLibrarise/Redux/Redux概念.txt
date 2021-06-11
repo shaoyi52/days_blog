@@ -1,0 +1,14 @@
+1.redux 
+
+1.1. createStore, 
+
+1.2. applyMiddleware（https://segmentfault.com/a/1190000008754562）
+
+它是 Redux 的原生方法，作用是将所有中间件组成一个数组，依次执行
+applyMiddleware方法主要是对redux的dispacth方法进行封装
+
+applyMiddleware 这个函数其实是一个 柯里化 的函数
+
+2.redux-thunk
+
+2.1 thunkMiddleware
