@@ -1,0 +1,28 @@
+* 路由设置
+* 别名设置
+* 引入第三方库 
+
+react-dnd
+
+react-grid-layout
+
+
+配置dva
+1. .ynurc.ts 文件配置
+ dva: {
+    immer: true,
+  },
+2. src目录下新建文件 app.tsx;
+
+`import { createLogger } from 'redux-logger';
+import { message } from 'antd';
+
+export const dva = {
+  config: {
+    onAction: createLogger(),
+    onError(e: Error) {
+      message.error(e.message, 3);
+    },
+  },
+};
+`

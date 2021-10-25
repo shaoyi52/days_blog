@@ -77,8 +77,5 @@ export default async(url="",data={}, type='Get', method = 'fetch')=>{
 
     })
   }
-
-
   
-
 }
