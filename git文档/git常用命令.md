@@ -26,3 +26,15 @@ Git 项目有 3 个区域：工作区、暂存区和 Git 仓库（分成本地�
 9. git br -m [old_br][new_br] 分支重命名
 10. 撤销变基操作
 11. git filter-branch --tree-filter 'rm -f passwords.txt' 该命令执行完会将提交历史中所有提交的 passwords.txt 文件彻底删除，永远没法通过 Git 找回
+
+## git 修改多次 commit 注释
+
+```
+# n：需要修改的最近n此commit
+git rebase -i HEAD~n
+# 按i进行编辑，需要修改那个注释，就将其前面的pick修改为edit
+# 然后按Esc后再按:wq保存并退出
+git commit --amend -m '注释'
+
+git rebase --continue
+```

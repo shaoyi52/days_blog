@@ -65,7 +65,7 @@ The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is mainta
 [普通链接](https://www.mdeditor.com/)
 [普通链接带标题](https://www.mdeditor.com/ "普通链接带标题")
 直接链接：<https://www.mdeditor.com>
-[锚点链接][anchor-id]
+[锚点链接] [anchor-id]
 [anchor-id]: https://www.mdeditor.com/
 [mailto:test.test@gmail.com](mailto:test.test@gmail.com)
 GFM a-tail link @pandao

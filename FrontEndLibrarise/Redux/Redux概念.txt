@@ -1,6 +1,15 @@
 1.redux 
 
 1.1. createStore, 
+getState	
+subscribe
+dispatch
+
+bindActionCreators
+combineReducers
+applyMiddleware
+Composes 
+
 
 1.2. applyMiddleware£¨https://segmentfault.com/a/1190000008754562£©
 

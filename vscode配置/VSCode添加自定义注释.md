@@ -1,21 +1,25 @@
 # VSCode 添加自定义注释
+
+代码片段配置项：https://blog.csdn.net/maokelong95/article/details/54379046/
+
 > 1. 步骤一：
+
 ```
 ctrl + shift + p，配置用户代码片段
 ```
 
-  
 ![snipptest](img/snippets.png "snipptest")
 
 > 2. 步骤二：
-``` 
+
+```
 点击javascript.json配置javascript`
 ![scriptJson](img/scriptJson.png "scriptJson")
 ```
 
 > 3. 自定义自己喜欢的快捷键
 
-```    "Print to js class": {
+```"Print to js class": {
         "prefix": "zhushicc",
         "body": [
             "/*",
@@ -36,6 +40,3 @@ ctrl + shift + p，配置用户代码片段
         ],
     },
 ```
-
-
-    
