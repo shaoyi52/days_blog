@@ -1,4 +1,5 @@
-﻿1.自定义指令；
+﻿详细源码vue2详解：https://www.cnblogs.com/greatdesert/p/11011485.html
+1.自定义指令；
 2.$emit的用法：
   vm.$emit( event, arg ) //触发当前实例上的事件
 3.$set;$nexttick,$attrs,$parent,$refs

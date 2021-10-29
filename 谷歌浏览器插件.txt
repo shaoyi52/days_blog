@@ -2,3 +2,4 @@
 Postman
 Redux DevTools
 Octotree
+EditThisCookie
