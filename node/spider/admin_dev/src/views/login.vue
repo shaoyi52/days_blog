@@ -67,13 +67,12 @@ export default {
         handleSubmit () {
             this.$refs.loginForm.validate((valid) => {
                 if (valid) {
-                    let obj = {
-                        params:{
+                    let params={
                             userName: this.form.userName,
                             pwd: this.getsha1(this.form.password)
                         }
-                    }
-                    util.post.login(obj).then((data) => {
+                   
+                    util.post.login(params).then((data) => {
                         this.$Message.success('登录成功');
                         this.$store.commit('setUser', data.user);
                         Cookies.set('token', data.token);

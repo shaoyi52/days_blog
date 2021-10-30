@@ -14,9 +14,9 @@
         </Card>
 
 
-        <Upload class="upload" :show-upload-list="false" multiple :action="baseUrl + '/upload'" :data="uploadParams" :on-success="uploadSuccess" :on-error="uploadError" :format="['jpg','png','gif']" :on-format-error="uploadFormatError" ref="upload">
+        <!-- <Upload class="upload" :show-upload-list="false" multiple :action="baseUrl + '/upload'" :data="uploadParams" :on-success="uploadSuccess" :on-error="uploadError" :format="['jpg','png','gif']" :on-format-error="uploadFormatError" ref="upload">
             <label id="uploadClick"></label>
-        </Upload>
+        </Upload> -->
 
         <wb-img :img="bigImg.url" :right="bigImg.right" :top="bigImg.top"></wb-img>
         <edit-book :edit="editStatus" :book-type-list="bookTypeList" ref="edit" @search="onClickSearch"></edit-book>
@@ -348,11 +348,12 @@
                     }
                 };
                 util.post.reptile.list(obj).then((data) => {
-                    this.reptileList = {};
-                    data.reptileList.forEach((value,index) => {
+                    //this.books =data.book;
+                    let reptileList=data.reptileList
+                    reptileList.forEach((value,index) => {
                         this.reptileList[value.reptileTypeId] = value;
                     })
-                    this.reptileList.length = data.reptileList.length;
+                    this.reptileList.length = reptileList.length;
                 }).catch((error) => {});
             },
             getBooks(page){
@@ -464,8 +465,10 @@
         },
         created() {
             this.getReptileList();
+            
         },
         mounted() {
+            this.start();
         },
         beforeDestroy() {
         },

@@ -6,7 +6,7 @@ const getBookUrl = require("../../reptileTool/getBookUrl");
 /*
  *   获取书的url地址
  * */
-router.use("", async function(req, res, next) {
+router.use("", async function (req, res, next) {
   let bookName = tool.getParams(req, "bookName");
   let reptileType = tool.getParams(req, "reptileType" || 0);
   let isProxy = tool.getParams(req, "isProxy" || "true");
@@ -23,7 +23,7 @@ router.use("", async function(req, res, next) {
       bookUrls.push(getBookUrl(value, bookName, isProxy));
     });
     Promise.all(bookUrls)
-      .then(async result => {
+      .then(async (result) => {
         let sendArr = [];
         let errorArr = [];
         result.forEach(async (urlList, index) => {
@@ -39,7 +39,7 @@ router.use("", async function(req, res, next) {
         });
         res.send(tool.toJson({ urlList: sendArr, errorArr }, "", 1000));
       })
-      .catch(function(error) {
+      .catch(function (error) {
         res.send(tool.toJson(null, "获取链接失败，失败原因：" + error, 1002));
       });
   } catch (err) {

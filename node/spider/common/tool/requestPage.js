@@ -14,8 +14,9 @@ require("superagent-charset")(superagent);
  */
 const requestPage = function (option) {
   return new Promise(async (resolve, reject) => {
-    let charset = "gbk";
+    let charset = "UTF-8";
     let rq = superagent.get(option.url);
+    console.log("rq====", rq);
     if (option.proxy) {
       let proxyIp = await tool.redisData.ipList.getRandomIpList();
       rq.proxy(proxyIp);
@@ -32,7 +33,7 @@ const requestPage = function (option) {
       })
         .charset(charset)
         .end(function (err, res) {
-          console.log("requestPage");
+          console.log("requestPage", res);
           if (err) {
             reject(err);
             //console.log(err);
@@ -42,6 +43,8 @@ const requestPage = function (option) {
             let $ = null;
             if (option.transform) {
               $ = option.transform(res.text);
+              let text = $(".footer_cont p").text();
+              console.log(text);
             } else {
               $ = res;
             }

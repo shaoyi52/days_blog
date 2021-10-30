@@ -7,9 +7,9 @@ const routeEach = require("./core/routeEach");
 const hostArr = require("../common/host"); //允许访问的域名
 const { fs, path, tool, log } = require("./tool/require");
 
-app.all("*", function(req, res, next) {
+app.all("*", function (req, res, next) {
   if (hostArr.indexOf(req.headers.host) == -1) {
-    log.error(`${req.headers.host}在${new Date().Format()}访问，已被拦截`);
+    //log.error(`${req.headers.host}在${new Date().Format()}访问，已被拦截`);
     res.send("总有刁民想害朕，锦衣卫护驾");
   } else {
     res.header("Access-Control-Allow-Origin", "*");
@@ -27,7 +27,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // 字段不符合就就不允许
 app.use((req, res, next) => {
-  console.log(tool.getParams);
   let limit = tool.getParams(req, "limit");
   if (limit && limit > 200) {
     res.send(tool.toJson("", "limit参数不能大于200", 1002));
@@ -53,7 +52,7 @@ routeEach(app);
 module.exports = app;
 
 //捕获node异常  不允许退出
-process.on("uncaughtException", function(err) {
+process.on("uncaughtException", function (err) {
   console.log("api异常退出被捕获了");
   console.error(err.stack);
   console.log("Node NOT Exiting...");

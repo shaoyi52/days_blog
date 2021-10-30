@@ -7,8 +7,8 @@ const {
   log,
   db,
 } = require("../tool/require");
-const reptileCommon = require("./common/reptileCommon");
-//const reptileCommon2 = require("./common/reptileCommon2");
+//const reptileCommon = require("./common/reptileCommon");
+const reptileCommon = require("./common/reptileCommon2");
 
 /*
  * 通过 url 获取
@@ -16,16 +16,19 @@ const reptileCommon = require("./common/reptileCommon");
  * */
 async function getBookUrl_common(reptileType, bookName, isProxy) {
   return new Promise(async (resolve, reject) => {
+    let repTileObj = await reptileCommon(reptileType);
+    let searchUrl = repTileObj.searchUrl(bookName);
+    console.log("searchUrl", searchUrl);
     try {
       let option = {
-        url:
-          "https://www.biquge5200.cc/modules/article/search.php?searchkey=%E9%AA%B7%E9%AB%85%E7%B2%BE%E7%81%B5",
+        url: searchUrl,
         transform: (body) => {
           return cheerio.load(body, { decodeEntities: false });
         },
       };
       let $ = await requestPage(option);
-      let repTileObj = await reptileCommon();
+      //let repTileObj = await reptileCommon();
+      let html = $.html();
       let list = repTileObj.getBookList($);
       resolve(list);
     } catch (err) {
