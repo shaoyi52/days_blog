@@ -3,3 +3,6 @@
 2.$emit的用法：
   vm.$emit( event, arg ) //触发当前实例上的事件
 3.$set;$nexttick,$attrs,$parent,$refs
+
+fillter:
+依赖注入 provide/inject组件的引入层次过多，用于子孙组件获取祖先组件的资源
