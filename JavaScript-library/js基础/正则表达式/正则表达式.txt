@@ -1,5 +1,4 @@
 定义正则：
-https://mp.weixin.qq.com/s/s_L13hw2E4R4Hq3QyIe2sw
 1.re= new RegExp("a")
 2.re= /a/
 
