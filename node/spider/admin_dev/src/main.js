@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-03-07 12:22:36
+ * @LastEditTime: 2021-11-14 22:05:47
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \spider\admin_dev\src\main.js
+ */
 import Vue from "vue";
 
 import { router } from "./router/index";
@@ -10,17 +18,21 @@ import "iview/dist/styles/iview.css";
 import "./styles/common.less";
 import "./libs/prototype";
 import iView from "iview";
+
+import "element-ui/lib/theme-chalk/index.css";
+import ElementUI from "element-ui";
 // import VueI18n from 'vue-i18n';
 // import util from './libs/util';
 // Vue.use(VueI18n);
 Vue.use(iView);
+Vue.use(ElementUI);
 window.timotaoAdmin = new Vue({
   el: "#app",
   router: router,
   store: store,
-  render: h => h(App),
+  render: (h) => h(App),
   data: {
-    currentPageName: ""
+    currentPageName: "",
   },
   mounted() {
     this.currentPageName = this.$route.name;
@@ -34,7 +46,7 @@ window.timotaoAdmin = new Vue({
   },
   created() {
     let tagsList = [];
-    appRouter.map(item => {
+    appRouter.map((item) => {
       if (item.children.length <= 1) {
         tagsList.push(item.children[0]);
       } else {
@@ -42,5 +54,5 @@ window.timotaoAdmin = new Vue({
       }
     });
     this.$store.commit("setTagsList", tagsList);
-  }
+  },
 });

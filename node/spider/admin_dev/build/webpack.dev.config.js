@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-03-07 12:22:35
+ * @LastEditTime: 2021-11-15 00:01:31
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \spider\admin_dev\build\webpack.dev.config.js
+ */
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 //const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -18,29 +26,29 @@ module.exports = merge(webpackBaseConfig, {
   output: {
     publicPath: "/dist/",
     filename: "[name].js",
-    chunkFilename: "[name].chunk.js"
+    chunkFilename: "[name].chunk.js",
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css",
-      allChunks: true
+      allChunks: true,
     }),
     new HtmlWebpackPlugin({
       title: "提莫淘书后台管理系统",
       filename: "../index.html",
-      inject: false
+      inject: false,
     }),
     new CopyWebpackPlugin(
       [
         {
-          from: "src/views/main-components/theme-switch/theme"
+          from: "src/views/main-components/theme-switch/theme",
         },
         {
-          from: "src/views/home/tinymce"
-        }
+          from: "src/views/home/tinymce",
+        },
       ],
       {
-        ignore: ["text-editor.vue"]
+        ignore: ["text-editor.vue"],
       }
     ),
     new webpack.LoaderOptionsPlugin({
@@ -51,7 +59,7 @@ module.exports = merge(webpackBaseConfig, {
               chunks: "initial",
               name: "testCommon", // 打包后的文件名
               minSize: 0,
-              minChunks: 2 // 重复2次才能打包到此模块
+              minChunks: 2, // 重复2次才能打包到此模块
             },
             vendor: {
               priority: 1, // 优先级配置，优先匹配优先级更高的规则，不设置的规则优先级默认为0
@@ -59,20 +67,21 @@ module.exports = merge(webpackBaseConfig, {
               chunks: "initial",
               name: "testVendor",
               minSize: 0,
-              minChunks: 1
-            }
-          }
-        }
-      }
-    })
+              minChunks: 1,
+            },
+          },
+        },
+      },
+    }),
   ],
   devServer: {
     //contentBase: "./dist/",
+    before: require("../mock/mock-server.js"),
     proxy: {
       "/v1": {
         target: "http://localhost:3000",
-        pathRewrite: { "^/v1": "" }
-      }
-    }
-  }
+        pathRewrite: { "^/v1": "" },
+      },
+    },
+  },
 });

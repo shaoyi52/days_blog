@@ -176,20 +176,20 @@ export const appRouter = [
     path: "/baseData",
     icon: "ios-image",
     title: "基楚数据",
-    name: "write-tool",
+    name: "baseData",
     component: Main,
     children: [
       {
         path: "testList",
         title: "题库管理",
         name: "testList",
-        component: () => import("@/views/baseData/testList.vue"),
+        component: () => import("@/views/exam/questionList.vue"),
       },
       {
         path: "userList",
         title: "用户管理",
         name: "userList",
-        component: () => import("@/views/writer/userList.vue"),
+        component: () => import("@/views/writer/bookList.vue"),
       },
     ],
   },
