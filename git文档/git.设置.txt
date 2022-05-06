@@ -1,3 +1,7 @@
 1.config文件设置自动保存 
 [credential]
   helper = store
+
+2.github提交 设置远程源地址
+
+git remote set-url origin https://<token>@github.com/shaoyi52/days_blog.git
