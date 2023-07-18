@@ -1,3 +1,11 @@
+<!--
+ * @Description: Do not ed"
+ * @Author: yzf
+ * @Date: 2020-07-17 09:22:00
+ * @LastEditors: yzf
+ * @LastEditTime: 2023-05-19 17:18:30
+ * @FilePath: \yudao-ui-adminh:\gitHub\days_blog\git文档\git常用命令.md
+-->
 # Git 常用命令
 
 # git 基本概念
@@ -38,3 +46,9 @@ git commit --amend -m '注释'
 
 git rebase --continue
 ```
+## git 恢复存
+1. git stash -m "保存暂存"
+2. git stash list 查看暂存列表
+3. git stash apply fileIndex 应用暂存
+3. git stash drop fileIndex 删除暂存
+4. git stash pop  恢复最后一次暂存的同时把stash内容也删了
