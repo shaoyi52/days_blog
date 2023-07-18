@@ -58,12 +58,12 @@ export const otherRouter = {
   redirect: "/home",
   component: Main,
   children: [
-    {
+    /*{
       path: "home",
       title: "首页",
       name: "home_index",
       component: () => import("@/views/home/home.vue"),
-    },
+    },*/
     {
       path: "ownspace",
       title: "个人中心",
@@ -164,12 +164,12 @@ export const appRouter = [
         name: "write-list",
         component: () => import("@/views/writer/bookList.vue"),
       },
-      {
+      /* {
         path: "bookType",
         title: "小说类型",
         name: "bookType",
         component: () => import("@/views/writer/bookType.vue"),
-      },
+      },*/
     ],
   },
   {
@@ -179,12 +179,12 @@ export const appRouter = [
     name: "baseData",
     component: Main,
     children: [
-      {
+      /* {
         path: "testList",
         title: "题库管理",
         name: "testList",
         component: () => import("@/views/exam/questionList.vue"),
-      },
+      },*/
       {
         path: "userList",
         title: "用户管理",

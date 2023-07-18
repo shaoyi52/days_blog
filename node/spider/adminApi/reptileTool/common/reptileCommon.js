@@ -1,3 +1,11 @@
+/*
+ * @Author: shaoyi52 824132231@qq.com
+ * @Date: 2020-02-21 18:45:16
+ * @LastEditors: shaoyi52 824132231@qq.com
+ * @LastEditTime: 2022-06-16 11:05:20
+ * @FilePath: \spider\adminApi\reptileTool\common\reptileCommon.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 const {
   rp,
   requestPage,
@@ -260,6 +268,13 @@ async function reptileCommon() {
       }
 
       return contentArr.join("<br>");
+    },
+    searchUrl: (bookName) => {
+      /*返回搜索地址*/
+      return (
+        "http://www.ibiqu.net/modules/article/search.php?searchkey=" +
+        tool.encodeURIComponent_GBK(bookName)
+      );
     },
   };
 

@@ -1,3 +1,11 @@
+/*
+ * @Author: shaoyi52 824132231@qq.com
+ * @Date: 2020-02-16 12:37:36
+ * @LastEditors: shaoyi52 824132231@qq.com
+ * @LastEditTime: 2022-06-16 10:18:27
+ * @FilePath: \spider\adminApi\app.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 global._base = __dirname + "/"; //设置全局requir目录前缀
 const express = require("express"),
   app = express();
@@ -43,7 +51,7 @@ app.all("/a/b", function(req, res, next) {
   console.log("222");
   res.end("执行完毕");
 });
-app.all("/c/b", function(req, res, next) {
+app.all("/c/b", function (req, res, next) {
   console.log("33");
   res.end("执行完毕c b");
 });*/

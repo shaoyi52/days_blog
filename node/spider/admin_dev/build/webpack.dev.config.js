@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-03-07 12:22:35
- * @LastEditTime: 2021-11-15 00:01:31
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-06-16 11:41:21
+ * @LastEditors: shaoyi52 824132231@qq.com
  * @Description: In User Settings Edit
  * @FilePath: \spider\admin_dev\build\webpack.dev.config.js
  */
@@ -76,7 +76,7 @@ module.exports = merge(webpackBaseConfig, {
   ],
   devServer: {
     //contentBase: "./dist/",
-    before: require("../mock/mock-server.js"),
+    //before: require("../mock/mock-server.js"),
     proxy: {
       "/v1": {
         target: "http://localhost:3000",

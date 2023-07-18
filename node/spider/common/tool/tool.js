@@ -3,7 +3,7 @@ const redisData = require("./redisData.js");
 const ipQueue = require("./ipQueue.js");
 const catalogQueue = require("./catalogQueue.js");
 //const queue = require("./queue.js");
-const permissionList = require("./permissionList.js");
+//const permissionList = require("./permissionList.js");
 const iconv = require("iconv-lite");
 const db = require("./mysql.js");
 const sqlConfig = require("../../config/sql");
@@ -489,8 +489,8 @@ module.exports = {
   isMobile,
   filterHtml,
   filterHtmlOrContainer,
-  permissionList: permissionList.permissionList,
-  allPermissionList: permissionList.allPermissionList,
+  //permissionList: permissionList.permissionList,
+  //allPermissionList: permissionList.allPermissionList,
   ipQueue,
   catalogQueue,
   //queue,
