@@ -89,3 +89,65 @@
     <div class="son3">e</div>
 </div>
 ```
+用 flex 实现圣杯布局
+```
+<style>
+    *{
+     	margin:0;
+        padding:0; 
+     }
+     body{
+      height:500px
+     }
+     .conterWrap{     
+      height:100%;     
+      display:flex;
+      flex-direction:column;      
+      background-color:#eee
+      }
+     .header{
+     	width:100%;
+        height:60px;
+        background-color:aqua;
+        text-align:center;
+     }
+     .content{
+       display:flex;
+       flex:1;       
+     }
+     .left{
+     	width:100px;
+        height:100%;
+        background-color:red;
+        text-align:center;
+     }
+     .right{
+     	width:100px;
+        height:100%;
+        background-color:pink;
+        text-align:center;
+     }
+     .middle{
+      flex:1;
+      height:100%;
+      background-color:royalblue;
+      text-align:center
+     }
+     .footer{
+     	width:100%;
+        height:60px;
+        background-color:aqua;
+        text-align:center
+     }
+    </style>
+
+    <div class="conterWrap">
+    <div class="header"><h1>header</h1></div>
+    <div class="content">
+    	<div class="left"><h1>left</h1></div>
+        <div class="middle"><h1>middle</h1></div>
+        <div class="right"><h1>right</h1></div>
+    </div>
+    <div class="footer"><h1>footer</h1></div>
+</div>
+```

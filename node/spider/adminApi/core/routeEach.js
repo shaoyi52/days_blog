@@ -1,3 +1,11 @@
+/*
+ * @Author: shaoyi52 824132231@qq.com
+ * @Date: 2020-02-16 15:06:31
+ * @LastEditors: shaoyi52 824132231@qq.com
+ * @LastEditTime: 2022-06-16 10:17:50
+ * @FilePath: \spider\adminApi\core\routeEach.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 const { fs, path, log } = require("../tool/require");
 
 const basePathG = path.join(__dirname, "../routes");
@@ -20,6 +28,10 @@ function routeEach(app, pathArr, basePathStr, basePath) {
     if (isDir(pathStr)) {
       //检查是不是文件夹
       let arr = fs.readdirSync(pathStr);
+      console.log(
+        `${basePathStr}/${pathArr[i]}` + "----检查是不是文件夹---" + basePath
+      );
+
       routeEach(app, arr, `${basePathStr}/${pathArr[i]}`, basePath);
     } else {
       let str = "";
@@ -39,7 +51,7 @@ function routeEach(app, pathArr, basePathStr, basePath) {
       if (basePathStr == "/images") {
         app.use(str, require(pathStr));
       } else {
-        //console.log(str + "---" + pathStr);
+        console.log(str + "---" + pathStr);
         app.all(str, require(pathStr)); //切记不要用app.use
       }
     }

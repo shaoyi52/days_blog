@@ -16,6 +16,12 @@ const requestPage = function (option) {
   return new Promise(async (resolve, reject) => {
     let charset = "UTF-8";
     let rq = superagent.get(option.url);
+    /*if (rq.statusCode != 200) {
+      reject("页面不存在！请确认地址是否失效。");
+      return;
+    }else{
+
+    }*/
     console.log("rq====", rq);
     if (option.proxy) {
       let proxyIp = await tool.redisData.ipList.getRandomIpList();
