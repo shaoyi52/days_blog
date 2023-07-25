@@ -187,4 +187,19 @@ var fireEvent = function(element,event){
 }; 
 ```
 
+### 四、模拟特定元素上的事件
+
+```jsx
+function simulateClick(id){
+	let event =new MouseEvent('click',{
+		'view':window,
+		'bubbles':true,
+		'cancelable':true
+	}) ;
+	
+	let element = document.getElementById(id)
+	
+	return elem.dispatchEvent(event);
+}
+```
 
