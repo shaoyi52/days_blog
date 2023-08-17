@@ -1,0 +1,43 @@
+{
+  "name": "p-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "files":["lib","src","packages","example"],
+  "scripts": {
+    "dev": "webpack serve --config webpack.dev.js --color --progress --hot",
+    "build:style":"gulp",
+    "build": "webpack --config webpack.prod.js --color --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yuyi",
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "html-webpack-plugin": "^5.5.3",
+    "node-sass": "^9.0.0",
+    "sass": "^1.65.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "vue": "^3.3.4",
+    "vue-loader": "^17.2.2",
+    "vue-template-compiler": "^2.7.14",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.15",
+    "cssnano": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-postcss": "^9.0.1",
+    "postcss": "^8.4.28"
+  }
+}

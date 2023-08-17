@@ -1,0 +1,21 @@
+{
+  "name": "nrm",
+  "version": "2.1.1-2",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "nrm": "bin/index.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  },
+  "dependencies": {
+    "user": "^0.0.0"
+  }
+}

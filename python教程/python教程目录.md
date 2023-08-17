@@ -1,4 +1,9 @@
 # python 元组
+
+[教程地址]: https://www.bilibili.com/video/BV1qW4y1a7fU/?p=116&amp;spm_id_from=pageDriver&amp;vd_source=ee910abf46946923bedc6d24a7db3c82
+
+
+
 ```
 list=[
     "Python导学视频",
