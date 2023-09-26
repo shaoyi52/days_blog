@@ -1,0 +1,6 @@
+ref
+const props=defineProps({
+	car:String,
+})
+const emit=defineMits([ 'changeMoney'])
+emit('changeMoney')
