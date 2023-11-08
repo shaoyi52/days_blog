@@ -28,6 +28,18 @@ function getExecStrs (str) {
 
 
 4.match()： 在字符串中搜索复合规则的内容，搜索成功就返回内容，格式为数组，失败就返回null。 
+
+5.提取匹配内容
+str = "<html><head><title>呵呵呵</title></head><body></body></html>";
+reg = /<title>([\s\S]+)<\/title>/gi
+var result;
+if ((result = reg.exec(str)) != null) {
+    alert(result);//显示“<title>呵呵呵</title>”，“呵呵呵”
+    alert(result[1]);//显示“呵呵呵”
+    //
+}
+
+
 示例
 需求：从124fddr323532${xxxasdsafxx}253${bnm}23354${abcd}233545xx54${666}233545xxxxx这类字符串中获取${}中的内容。注意${xxx}的个数是不确定的
 function getMatchedStrs (str) {
