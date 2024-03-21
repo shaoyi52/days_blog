@@ -57,6 +57,8 @@ function getMatchedStrs (str) {
 示例：
 需求：数组遍平化 arr = [1, [2, [3, [4, 5]]], 6]
 const res2 = JSON.stringify(arr).replace(/\[|\]/g, '').split(',')
+参考地址：
+https://m.biancheng.net/view/5632.html
 
 一、正则表达式字符
 二、练习例子【1.手机号、网址、密码】
