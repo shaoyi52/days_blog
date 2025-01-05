@@ -1,8 +1,0 @@
-@import './base.scss';
-@import './function.scss';
-
- @mixin b($block) { 
-  .#{$namespace+'-'+$block} {
-    @content;
-  }
-} 

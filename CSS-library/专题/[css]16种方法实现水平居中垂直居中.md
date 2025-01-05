@@ -53,32 +53,15 @@
 
 - 行内块级元素
 
-```css
-.parent{
+```
+.parent::after, .son{
     display:inline-block;
-    background:#e0e0e0;
-    width:150px;
-    height:150px;
-    text-align:center;			
-}
-.parent:after{
-    content: "";
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.son{
-    display:inline-block;
-    background:#a0a0e0;
-    width:80px;
-    height:80px;
     vertical-align:middle;
 }
-
-
-
-
+.parent::after{
+    content:'';
+    height:100%;
+}
 ```
 
 ## 资料来源
